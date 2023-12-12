@@ -10,8 +10,10 @@ public class Tester
         {
             System.out.println("x");
             double x= Double.parseDouble(keyboard.readLine());
+            punto.setX(x);
             System.out.println("y");
             double y= Double.parseDouble(keyboard.readLine());
+            punto.setY(y);
         }
         //nuove coordinate
         System.out.println("Spostare il punto");
@@ -32,6 +34,7 @@ public class Tester
             cerchio.setPoint(xCerchio,yCerchio);
             System.out.println("raggio");
             double raggio= Double.parseDouble(keyboard.readLine());
+            System.out.print(cerchio);
         }
         //nuove coordinate
         System.out.println("Spostare il cerchio");

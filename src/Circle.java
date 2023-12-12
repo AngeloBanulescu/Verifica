@@ -1,3 +1,4 @@
+import com.sun.istack.internal.NotNull;
 public class Circle {
     private Point point;
     private double raggio;
@@ -29,7 +30,7 @@ public class Circle {
     {
         point.spostaY(y);
     }
-    public boolean pointInCircle(Point point2)
+    public boolean pointInCircle(@NotNull Point point2)
     {
         double distanza=Math.sqrt(Math.pow(point2.getX() - this.point.getX(), 2) + Math.pow(point2.getY()
                 - this.point.getY(), 2));
@@ -42,6 +43,7 @@ public class Circle {
             return false;
         }
     }
+    @Override
     public String toString()
     {
         return point.getX() + "," + point.getY() + " raggio" + raggio;
