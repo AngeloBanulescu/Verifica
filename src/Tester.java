@@ -6,7 +6,7 @@ public class Tester
         Point punto= new Point();
         //spostare punto
         System.out.println("Assegnare cordinate iniziali al punto?");
-        if(Boolean.parseBoolean(keyboard.readLine()) == true)
+        if(Boolean.parseBoolean(keyboard.readLine()))
         {
             System.out.println("x");
             double x= Double.parseDouble(keyboard.readLine());
@@ -23,13 +23,13 @@ public class Tester
         //spostare cerchio
         Circle cerchio= new Circle();
         System.out.println("Assegnare cordinate iniziali cerchio?");
-        if (Boolean.parseBoolean(keyboard.readLine()) == true)
+        if (Boolean.parseBoolean(keyboard.readLine()))
         {
             System.out.println("x");
             double xCerchio= Double.parseDouble(keyboard.readLine());
             System.out.println("y");
-            double yChercio= Double.parseDouble(keyboard.readLine());
-            Circle.setPoint(cerchiox,y);
+            double yCerchio= Double.parseDouble(keyboard.readLine());
+            cerchio.setPoint(xCerchio,yCerchio);
             System.out.println("raggio");
             double raggio= Double.parseDouble(keyboard.readLine());
         }
@@ -38,8 +38,17 @@ public class Tester
         double xCerchio= Double.parseDouble(keyboard.readLine());
         double yChercio= Double.parseDouble(keyboard.readLine());
         System.out.print(cerchio);
+
         //punto nel cerchio
-        boolean verifica=Circle.pointInCircle();
+        Point point2= new Point();
+        System.out.println("x");
+        double newx= Double.parseDouble(keyboard.readLine());
+        System.out.println("y");
+        double newy= Double.parseDouble(keyboard.readLine());
+        point2.setX(newx);
+        point2.setY(newy);
+
+        boolean verifica=cerchio.pointInCircle(point2);
         if (verifica==true)
         {
             System.out.println("punto appartiene al cerchio");

@@ -1,15 +1,20 @@
 public class Circle {
-    private static Point point;
-    private static double raggio;
+    private Point point;
+    private double raggio;
     public Circle(Point coordinates, double raggio)
     {
-        point=coordinates;
+        this.point=coordinates;
         this.raggio=raggio;
     }
     public Circle()
     {
         raggio=1;
         point=new Point();
+    }
+
+    public void setPoint(double xCerchio, double yCerchio)
+    {
+
     }
 
     public double getRaggio() {
@@ -24,10 +29,10 @@ public class Circle {
     {
         point.spostaY(y);
     }
-    public static boolean pointInCircle()
+    public boolean pointInCircle(Point point2)
     {
-        double distanza=Math.sqrt(Math.pow(point.getX() - Circle.point.getX(), 2) + Math.pow(point.getY()
-                - Circle.point.getY(), 2));
+        double distanza=Math.sqrt(Math.pow(point2.getX() - this.point.getX(), 2) + Math.pow(point2.getY()
+                - this.point.getY(), 2));
         if(distanza<raggio)
         {
             return true;

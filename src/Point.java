@@ -27,13 +27,11 @@ public class Point {
     public void spostaX(double x)
     {
         this.x+=x;
-        return;
     }
 
     public void spostaY(double y)
     {
         this.y+=y;
-        return;
     }
 
     @Override
